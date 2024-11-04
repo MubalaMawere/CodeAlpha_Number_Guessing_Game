@@ -19,9 +19,16 @@ int main() {
 
     // Main game loop
     while (true) {
-        cout << "Enter your guess: ";
-        cin >> guess;
+        cout << "Enter your guess between 1 and 32: ";
+       cin >> guess;
         attempts++;
+
+        if (guess<=0){
+            cout<<"Invalid input! Please enter a valid digit\n";
+            break;
+        }
+       
+    
 
         if (guess < guessNumber) {
             cout << "Too low! You Lost.\n";
